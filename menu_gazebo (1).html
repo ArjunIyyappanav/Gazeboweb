@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="g1styles.css">
+    <title>Gazebo 1 Menu</title>
+</head>
+<body>
+    <header>
+        <h1>Gazebo 1</h1>
+        <p>Delicious Food, Delightful Ambiance</p>
+    </header>
+
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+
+    <div class="menu-container" id="menu-container">
+        <div class="menu-category" data-category="starters">
+            <h2>Starters</h2>
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <h3>Garlic Bread</h3>
+                            <p>Perfectly toasted with garlic butter.</p>
+                        </div>
+                        <div class="quantity-container">
+                            <input type="number" class="quantity-input" value="1" min="1" />
+                            <button class="add-button" onclick="addToOrder('Garlic Bread', 150, 'starters')">Add</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more starter items as needed -->
+            </ul>
+        </div>
+
+        <div class="menu-category" data-category="main-course">
+            <h2>Main Course</h2>
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <h3>Margherita Pizza</h3>
+                            <p>Classic pizza with tomato, mozzarella, and basil.</p>
+                        </div>
+                        <div class="quantity-container">
+                            <input type="number" class="quantity-input" value="1" min="1" />
+                            <button class="add-button" onclick="addToOrder('Margherita Pizza', 300, 'main-course')">Add</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more main course items as needed -->
+            </ul>
+        </div>
+
+        <div class="menu-category" data-category="desserts">
+            <h2>Desserts</h2>
+            <ul>
+                <li>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <h3>Chocolate Brownie</h3>
+                            <p>Rich and gooey chocolate brownie.</p>
+                        </div>
+                        <div class="quantity-container">
+                            <input type="number" class="quantity-input" value="1" min="1" />
+                            <button class="add-button" onclick="addToOrder('Chocolate Brownie', 120, 'desserts')">Add</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more dessert items as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="order-summary" id="order-summary">
+        <h2>Order Summary</h2>
+        <ul id="summary-list"></ul>
+        <p id="total-price">Total: ₹0</p>
+        <button class="confirm-button" onclick="confirmOrder()">Confirm Order</button>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
